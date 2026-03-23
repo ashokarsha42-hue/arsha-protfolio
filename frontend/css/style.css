@@ -3,15 +3,15 @@
    ============================================================ */
 
 :root {
-  --bg:           #050a0e;
-  --bg2:          #081420;
-  --accent:       #00ffe7;
-  --accent2:      #00a8ff;
-  --red:          #ff003c;
-  --text:         #c9d1d9;
-  --muted:        #4a5a6a;
-  --card:         #0b1a28;
-  --border:       #122535;
+  --bg:           #170012;  /* deep dark pink base */
+  --bg2:          #280023;  /* deeper mauve shade */
+  --accent:       #ff33cc;  /* hot neon pink */
+  --accent2:      #ff00aa;
+  --red:          #ff0044;
+  --text:         #ffe6ff;
+  --muted:        #f9a2e8;
+  --card:         #210021;
+  --border:       #550055;
   --font-display: 'Orbitron', sans-serif;
   --font-mono:    'Share Tech Mono', monospace;
   --font-body:    'Rajdhani', sans-serif;
@@ -21,11 +21,22 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg);
+  background: radial-gradient(circle at top left, #3b003f 0%, #140012 35%, #0e0010 100%);
   color: var(--text);
   font-family: var(--font-body);
   font-size: 1.05rem;
   overflow-x: hidden;
+gi  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 220px rgba(255, 51, 204, 0.35), 0 0 90px rgba(255, 20, 165, 0.2);
+  mix-blend-mode: screen;
+  z-index: -1;
 }
 
 /* ── NAVBAR ── */
