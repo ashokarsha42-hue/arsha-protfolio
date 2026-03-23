@@ -1,11 +1,11 @@
 [build]
+  base    = "backend"
   publish = "../frontend"
   command = "npm install"
 
 [functions]
   directory = "netlify/functions"
 
-# Route /api/* calls to Netlify serverless functions
 [[redirects]]
   from = "/api/contact"
   to   = "/.netlify/functions/contact"
@@ -21,7 +21,6 @@
   to   = "/.netlify/functions/admin-messages"
   status = 200
 
-# Catch-all SPA fallback
 [[redirects]]
   from = "/*"
   to   = "/index.html"
