@@ -79,7 +79,18 @@ body::before {
   display: flex; align-items: center; justify-content: center;
   text-align: center;
   position: relative; overflow: hidden;
-  background: radial-gradient(ellipse at 50% 40%, #0a2535 0%, var(--bg) 65%);
+  background: radial-gradient(circle at 50% 30%, #56002e 0%, #1e001d 40%, #0b0011 100%);
+  background-blend-mode: overlay;
+  box-shadow: inset 0 0 120px rgba(255,0,140,0.35);
+}
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(45,6,34,0.92);
+  border-bottom: 1px solid rgba(255,51,204,0.4);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
 }
 .grid-bg {
   position: absolute; inset: 0;
