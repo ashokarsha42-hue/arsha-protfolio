@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel | Arsha Ashok</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">AA<span class="blink">_</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">&larr; Back to Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- LOGIN -->
+  <div id="login-section">
+    <div class="login-box">
+      <h2>// ADMIN_ACCESS</h2>
+      <div id="login-error"></div>
+      <div class="input-group">
+        <label>EMAIL</label>
+        <input type="email" id="admin-email" placeholder="admin@email.com"/>
+      </div>
+      <div class="input-group">
+        <label>PASSWORD</label>
+        <input type="password" id="admin-password" placeholder="••••••••"
+          onkeydown="if(event.key==='Enter') adminLogin()"/>
+      </div>
+      <button class="submit-btn" onclick="adminLogin()"><span>LOGIN &gt;&gt;</span></button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="admin-section" style="display:none;">
+    <div class="admin-wrapper">
+      <div class="admin-header">
+        <span>// MESSAGES_INBOX</span>
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <button class="refresh-btn" onclick="loadMessages()">↻ REFRESH</button>
+          <button class="logout-btn" onclick="adminLogout()">LOGOUT</button>
+        </div>
+      </div>
+      <div id="messages-container">
+        <div class="loading-msg">[ LOADING... ]</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
